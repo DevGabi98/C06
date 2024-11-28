@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vhacman <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 12:06:11 by vhacman           #+#    #+#             */
+/*   Updated: 2024/11/28 12:07:18 by vhacman          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 /*
 void	ft_put_name(char *str)
@@ -17,8 +29,8 @@ int	main(int argc, char **argv)
 }*/
 
 int	main(int argc, char **argv)
-{ 
-	int i;
+{
+	int	i;
 
 	i = 0;
 	while (argv[0][i])
@@ -26,7 +38,7 @@ int	main(int argc, char **argv)
 		write(1, &argv[0][i], 1);
 		i++;
 	}
-		write(1, "\n", 1);
+	write(1, "\n", 1);
 	(void) argc;
 	return (0);
 }

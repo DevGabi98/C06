@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vhacman <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 12:02:38 by vhacman           #+#    #+#             */
+/*   Updated: 2024/11/28 12:04:26 by vhacman          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int	main(int argc, char **argv)
@@ -5,16 +17,17 @@ int	main(int argc, char **argv)
 	int	i;
 	int	j;
 
-	j = argc - 1; //inizia da ultimo argomento
+	j = argc - 1;
 	while (j > 0)
 	{
 		i = 0;
 		while (argv[j][i] != '\0')
-		{	write(1, &argv[j][i], 1);
+		{
+			write(1, &argv[j][i], 1);
 			i++;
 		}
 		write(1, "\n", 1);
-		j--; //vai a leggere ogni argomento da destra a sinistra(dal più recente al più vecchio
+		j--;
 	}
-	return(0);
+	return (0);
 }
